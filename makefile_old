@@ -1,0 +1,15 @@
+objects = main.o Pizza.o PizzaStore.o
+CC = g++ -std=c++11
+
+main:$(objects)
+	$(CC) -o main $(objects)
+main.o:main.cpp
+	$(CC) -c main.cpp
+PizzaStore.o:PizzaStore.cpp
+	$(CC) -c PizzaStore.cpp
+Pizza.o:Pizza.cpp
+	$(CC) -c Pizza.cpp
+clean:
+	rm main $(objects)
+
+
